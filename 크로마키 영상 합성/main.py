@@ -42,7 +42,7 @@ while True:
         
         frame2=cv2.resize(frame2,(w,h))
 
-        #HSV 색 공간에서 녹색 영역을 검출하여 합성
+        #HSV 색 공간에서 원하는 영역을 검출하여 합성
         hsv=cv2.cvtColor(frame1,cv2.COLOR_BGR2HSV)
         mask=cv2.inRange(hsv,(100,150,0),(120,255,200))
         cv2.copyTo(frame2,mask,frame1)
