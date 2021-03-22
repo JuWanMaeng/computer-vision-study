@@ -7,6 +7,7 @@ def on_mouse(event,x,y,flags,param):
         print(x,y)
 
 src=cv2.imread('mask.png')
+src=cv2.resize(src,(720,480))
 print(src.shape)
 cv2.namedWindow('src')
 cv2.setMouseCallback('src',on_mouse,src)
